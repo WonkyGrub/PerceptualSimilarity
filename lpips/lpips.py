@@ -143,7 +143,7 @@ class LPIPS(nn.Module):
         else:
             return val
         
-        def forward_distmat(self, in0, in1=None, retPerLayer=False, normalize=False, batch_size=64):
+    def forward_distmat(self, in0, in1=None, retPerLayer=False, normalize=False, batch_size=64):
         """Compute distance matrix with batch processing."""
         if normalize:  # turn on this flag if input is [0,1] so it can be adjusted to [-1, +1]
             in0 = 2 * in0 - 1
